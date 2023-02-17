@@ -9,7 +9,7 @@ class DBManager:
 
         # self.create_table("ORDER","Order_ID INTEGER PRIMARY KEY,Order_Nr,Organizacija,Datums,Apmaksats,Order_Received,Apm_Datums,User_ID")
         self.create_table("ORDER_DETAIL","Order_Detail_ID INTEGER PRIMARY KEY,Order_ID,Order_Address,Order_Detail,Payment_Status")
-        self.create_table("ORDERS","Order_ID INTEGER PRIMARY KEY,Order_NR,Organizacija,Datums,Apmaksats,Order_Received,Apm_Datums,User_ID")
+        self.create_table("ORDERS","Order_ID INTEGER PRIMARY KEY,Organizacija,Datums,Apmaksats,Order_Received,Apm_Datums,User_ID")
     def create_table(self, table_name, fields):
         self.cursor.execute(f"CREATE TABLE IF NOT EXISTS {table_name}({fields})")
         self.conn.commit()
