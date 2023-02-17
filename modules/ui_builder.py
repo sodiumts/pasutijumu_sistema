@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 from layouts import admin_create_layout, login_layout, admin_panel_layout,order_layout,user_layout,update_order_layout,view_layout
-import random
 class GUIBuilder:
     def __init__(self,admin,db):
         sg.theme('DarkAmber')
